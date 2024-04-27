@@ -1,0 +1,116 @@
+body{
+    margin: 0;
+    padding: 0;   
+    box-sizing: border-box;
+    display: grid;
+    /*3 filas 2 columnas*/
+    grid-template-rows: 7h 86vh 7vh;
+    grid-template-columns: 15vw 85vw;
+    grid-template-areas: 
+    'header header'
+    'nav main'
+    'footer footer';
+}
+
+.header{
+    grid-area: header;
+    background-color:rgb(9, 9, 97);
+    text-align: center;
+}
+.header p{
+    color: white;
+    text-align: center;
+}
+
+
+
+.nav{
+    grid-area: nav;
+    background-color:rgb(148, 144, 144);
+}
+.navcate{
+    margin: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; 
+}
+
+.nav li{
+    list-style: none;
+}
+
+.nav a{
+    text-decoration: none;
+    color: black;
+}
+
+.nav ul{
+    margin: 0;
+    padding: 0;
+}
+
+
+
+.main{
+    grid-area: main;
+    background-color: rgb(148, 144, 144);
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    justify-items: center; /*alinear las card dentro del div*/
+    align-items: center;
+
+    /*flexbox: justify-content align-items
+    grid: justify-items 'justify-content' 'align-items' 'align-conten'*/
+}
+
+.card{
+    margin: 10px;
+    height: 400px;
+    width: 350px;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.contenedorImg{
+    width: 100%;
+    height: 100%;   
+    overflow: hidden;
+}
+.contenedorImg img{
+    width: 100%;
+    height: 100%;
+    object-fit: scale-down;    
+}
+
+
+
+.footer{
+grid-area: footer;
+background-color: white;
+text-align: center;
+padding: 10px;
+
+}
+.footer p{
+    text-align: center;
+}
+
+.titulo{
+    margin: 0;
+}
+
+.boton{
+    width: 100%;
+    background-color:rgb(9, 9, 97);
+    color: white;
+    cursor: pointer;
+    padding: 10px;
+    box-shadow: -1px 1px 80px;
+}
+
+.numero{
+    color: rgb(57, 57, 57);
+}
